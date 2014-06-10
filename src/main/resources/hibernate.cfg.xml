@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://plannedwithstand.corp.sg3.yahoo.com:3306/hibernate_test</property>
+        <property name="hibernate.connection.username">hibernate</property>
+        <property name="hibernate.connection.password">1234</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">true</property>
+        <mapping resource="com/my/common/Stock.hbm.xml"></mapping>
+        <mapping class="com.my.common.StockNew"></mapping>
+        <!-- <mapping resource="com/my/common/many_to_one.hbm.xml"></mapping> -->
+         <mapping resource="com/my/common/one_to_one.hbm.xml"></mapping>
+        <!-- <mapping resource="com/my/common/one_to_many.hbm.xml"></mapping> -->
+        <!-- <mapping resource="com/my/common/many_to_many.hbm.xml"></mapping> -->
+        <!-- <mapping resource="com/my/common/component_mapping.hbm.xml"></mapping> -->
+
+    </session-factory>
+</hibernate-configuration>
